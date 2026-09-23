@@ -96,6 +96,27 @@ body { font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif; backgr
 }
 .xpm-section-gallery .gallery-item img:hover { transform:scale(1.05); }
 
+/* 入驻建品版块图集强化：高度固定不变、宽度按原始比例自然舒展、不裁切不压缩、超宽横向滚动 */
+#xpm-4 .xpm-section-gallery .gallery-grid,
+#xpm-5 .xpm-section-gallery .gallery-grid {
+  display:flex; gap:10px; margin-bottom:24px;
+  flex-wrap:nowrap; align-items:flex-start;
+  overflow-x:auto; padding-bottom:6px;
+}
+#xpm-4 .xpm-section-gallery .gallery-item,
+#xpm-5 .xpm-section-gallery .gallery-item {
+  border-radius:8px; overflow:hidden; background:#f5f5f5;
+  border:1px solid #eee; aspect-ratio:auto; flex:0 0 auto;
+  width:auto; max-width:none;
+}
+#xpm-4 .xpm-section-gallery .gallery-item img,
+#xpm-5 .xpm-section-gallery .gallery-item img {
+  width:auto; max-width:none; height:340px; object-fit:contain; display:block;
+  cursor:pointer; transition:transform 0.2s;
+}
+#xpm-4 .xpm-section-gallery .gallery-item img:hover,
+#xpm-5 .xpm-section-gallery .gallery-item img:hover { transform:scale(1.05); }
+
 /* 市场趋势模块图集：统一高度、按原始比例自然舒展、横向滚动 */
 #trend .gallery-grid,
 #market-trend .gallery-grid {
@@ -486,6 +507,28 @@ html { scroll-behavior:smooth; }
 <div class="xpm-sec" id="xpm-2p">
   <div class="xpm-sec-title"><span class="num" style="background:#0E8A6A">&#128176;</span>价格 &amp; 摄影</div>
   <div class="xpm-note" style="background:#EFFAF6;border-left-color:#0E8A6A">线下验厂通过后，待开放竞价，中标后按照入驻流程线上入驻。</div>
+
+  <div class="card" style="background:#F7FDFA;border:1px solid #CDEBDE;margin-top:16px">
+    <style>
+      @keyframes xpmShine { 0%{background-position:-200% center;} 100%{background-position:200% center;} }
+      @keyframes xpmGlow { 0%,100%{text-shadow:0 0 6px rgba(14,138,106,.55),0 0 14px rgba(14,138,106,.3);} 50%{text-shadow:0 0 10px rgba(14,138,106,.95),0 0 22px rgba(14,138,106,.55);} }
+      .xpm-shine-title { font-size:17px;font-weight:800;display:inline-block;padding:6px 14px;border-radius:8px;
+        background:linear-gradient(110deg,#0E8A6A 20%,#35C79A 40%,#63E6BE 50%,#35C79A 60%,#0E8A6A 80%);
+        background-size:200% auto;color:#fff;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+        animation:xpmShine 2.2s linear infinite,xpmGlow 2.2s ease-in-out infinite; }
+    </style>
+    <div style="margin-bottom:14px"><span class="xpm-shine-title">商家竞价中标后需及时推进：</span></div>
+    <div class="xpm-box" style="background:#fff;border-color:#CDEBDE;margin-bottom:12px">
+      <div style="font-size:13px;font-weight:700;color:#0E8A6A;margin-bottom:8px">1、中标底板版型样打版寄样</div>
+      <p style="font-size:13px;color:#555;line-height:1.9;margin:0">童装 <b>1件8Y + 1件14Y + 1张A4大小面料裁片</b>，时效<b style="color:#D32F2F">3-5天</b>，超时可能取消资格；只有审版通过才会流入线上版型推送，请务必关注。</p>
+    </div>
+    <div class="xpm-box" style="background:#fff;border-color:#CDEBDE;margin-bottom:12px">
+      <div style="font-size:13px;font-weight:700;color:#0E8A6A;margin-bottom:4px">2、联系布行确认面料纤维成分报告</div>
+    </div>
+    <div class="xpm-box" style="background:#fff;border-color:#CDEBDE">
+      <div style="font-size:13px;font-weight:700;color:#0E8A6A;margin-bottom:4px">3、烫画2D底板需发送<b>版型 + 色卡</b> @对应运营 确认底板颜色</div>
+    </div>
+  </div>
 
   <div class="card" style="background:#F7FDFA;border:1px solid #CDEBDE;margin-top:16px">
     <div style="font-size:14px;font-weight:700;color:#0E8A6A;margin-bottom:12px">&#128202; 版型核算公式</div>
